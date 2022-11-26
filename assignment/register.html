@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Signup page </title>
+</head>
+<style>
+	body{background-color:rgb(1, 15, 13)}#modal-signup{position: fixed;top: 0;left: 0;right: 0;bottom: 0;display: none;animation: modalFadeIn ease-in 0.4s;background-color: rgba(250, 250, 250, 0.6)}#modal-signup #btn-close{position: absolute;top: 0;right: 0;z-index: 5;padding: 14px;font-size: 25px;color: rgb(148, 199, 175)}#modal-signup #btn-close:hover{cursor: pointer}.col-bg{padding: 8px 16px;background: linear-gradient(to bottom, rgb(0, 0, 0) 50%, rgb(214, 101, 248) 100%, rgba(125, 185, 232, 1) 100%)}.sign-up .heading{font-size: 37px;font-family: cursive;color: rgb(255, 255, 255);margin-top: 16px;text-align: center}.sign-up .form-group-spe{display: flex;flex-direction: row;justify-content: space-between}.form-group{margin-right: 0 !important}.form-control{font-size: 13px;border-radius: 30px;border: none;outline: none;height: 35px}.form-control:focus::placeholder{border: none}.form-group-spe p, .form-group p, .form-check-label{font-size: 14px;margin-bottom: 4px}.form-group-spe .form-control{width: 100%}.form-group .form-control{width: 100%}.sign-up .form-group{display: block}.btn-success{margin-top: 8px !important;width: 35%;height: 35px;border-radius: 30px}.btn-success:hover{box-shadow: rgb(38 57 77) 0px 20px 30px -10px !important}.form-check-input{width: 20px;height: 20px}.col-title{display: flex;flex-direction: column;justify-content: center}.col-title h1{font-size: 60px;margin-left: 50px;color: rgb(252, 252, 252);font-family: cursive}.title-social{font-size: 13px;text-align: center;margin-top: 6px !important;margin-bottom: 2px !important}.signup-other{display: flex;margin-top: 6px;align-items: center;justify-content: space-around}.signup-other .social img{width: 20px;height: 20px;margin-right: 8px}.signup-other .social{width: 50%;height: 40px;display: flex;flex-direction: row;justify-content: center;margin-right: 6px;padding-top: 8px;border-radius: 30px;background-color: rgb(193, 221, 208)}.signup-other .social:hover{cursor: pointer;opacity: 0.8;color: rgb(255, 255, 255);background-color: #222425;transition: all 0.3s ease-in}.social p{text-align: center}.re-login{font-size: 13px;margin-top: 16px;margin-bottom: 4px;text-align: center}.re-login a{font-size: 15px;text-decoration: none;color: rgb(255, 255, 255)}.re-login a:hover{color: #dd6300}
+</style>
+	<div class="container">
+		<div class="d-flex justify-content-center">
+			<div class="row my-5">
+				<div class="col-bg col-md-6 text-left text-white lcol">
+					<form class="sign-up">
+						<h1 class="heading mb-4">Registration from</h1>
+						<hr>
+						<div class="form-group-spe fone mt-2">
+							<div class="form-item" style="color: #eee;">
+								<h3>First name</h3> <input type="name" class=" form-control" placeholder="Enter your First name">
+							</div>
+							<div class="form-item" style="color: #eee;">
+								<h3>Last name</h3> <input type="name" class=" form-control" placeholder="Enter your Last name">
+							</div>
+						</div>
+						<div class="form-group fone mt-2" style="color: #eee;">
+							<h3>Email</h3> <input type="email" class=" form-control" placeholder="Enter your Email">
+						</div>
+						<div class="form-group fone mt-2" style="color: #eee;">
+							<h3>Password</h3> <input type="password" class="form-control" placeholder="Enter your Password">
+						</div>
+						<div class="form-group fone mt-2" style="color: #eee;">
+							<h3>Confirm password</h3> <input type="password" class="form-control" placeholder="Re Enter your Password">
+						</div> <label class="mt-16 checkbox-cus"> <input type="checkbox" class="form-check-input ml-0" id="exampleCheck1"> <span class="form-check-label ml-3" for="exampleCheck1" style="color: #eee;">I accept the Terms of Use & Policy</span> </label>
+					</form> <button type="button" class="btn btn-success"><a href="login.html">Sign Up</a></button>
+					<h2 style="color:#eee" class="title-social">Or signup with </h2>
+					<div class="signup-other">
+						<div class="social"> 
+							<h3><a href="https://www.facebook.com/">Facebook</a><h3>
+						</div>
+						<div class="social" > 
+							<h3><a href="https://accounts.google.com/signin/v2/identifier?rart=ANgoxcdbbNxH1nYXChBQ7n_DhSet9sRm1XXzUFTdrodQQJThJv3oPCktvjFuZq-YDK8WsXHW_gXYeU7G-XB1iBPG0qMJAeBgcA&TL=ADFpJfMkQBRoVY9C8R_3yUKYC0XJAvRdtdiqZaqiE4yOOQbqW6XLOCJLOBlu3efx&flowName=GlifWebSignIn&cid=1&flowEntry=ServiceLogin">Google</a></h3>
+						</div>
+					</div>
+					<p style="color:#eee" class="re-login">Already have account ? <a id="login-open2" href="login.html">Log In</a> </p>
+				</div>
+				<div class="col-bg col-title col-md-6 rcol">
+					<div class="sign-img">
+						<h1 style="text-align: center;">Sign up for the best experience !</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+
+</html>
