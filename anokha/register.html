@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <title>Anokha 2023 Registration</title>
+</head>
+<style>
+    html {
+  font-size: 20px;
+}
+
+h1 {
+  margin: auto;
+  padding:center;
+  text-align: center;
+}
+
+body {
+  background-image: url('planet-earth-night-view-illuminated-orbit-dark-background-5k-6000x2500-8934.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+body {
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+form li {
+  list-style: none;
+  margin: auto;
+  text-align: center;
+  padding:center;
+}
+
+form ul li label{
+  float: center;
+  clear: center;
+  width: 100px;
+  text-align: center;
+  margin-right: 10px;
+  font-family:Verdana, Arial, Helvetica, sans-serif;
+  font-size:18px;
+}
+
+form ul li input, select, span {
+  float: center;
+  margin-bottom: 10px;
+}
+
+form textarea {
+  float: center;
+  width: 350px;
+  height: 150px;
+}
+
+input {
+  border-radius: 10px;
+}
+
+[type="submit"] {
+  clear: center;
+  margin: 20px 0 0 230px;
+  font-size:18px;
+  border-radius: 10px;
+}
+
+[type="button"] {
+  clear: center;
+  margin: 20px 0 0 20px;
+  font-size: 18px;
+  border-radius: 10px;
+}
+
+p {
+  margin-left: 70px;
+  font-weight: bold;
+  text-align: none;
+}
+</style>
+<script>
+    function formValidation()
+{
+var uname = document.registration.username;
+var uadd = document.registration.address;
+var ucountry = document.registration.country;
+var uzip = document.registration.zip;
+var uemail = document.registration.email;
+var umsex = document.registration.msex;
+var ufsex = document.registration.fsex; 
+    if(allLetter(uname)) {
+      if(alphanumeric(uadd)) { 
+        if(countryselect(ucountry)) {
+          if(allnumeric(uzip)) {
+            if(ValidateEmail(uemail)) {
+              if(validsex(umsex,ufsex)) {}
+              } 
+            }
+          } 
+        }
+      }
+  return false;
+}
+
+
+function allLetter(uname) { 
+  var letters = /^[A-Za-z]+$/;
+  if(uname.value.match(letters))  {
+    return true;
+  } else  {
+    alert('Username must have alphabet characters only');
+    uname.focus();
+    return false;
+  }
+}
+
+
+function alphanumeric(uadd) { 
+  var letters = /^[0-9a-zA-Z]+$/;
+  if(uadd.value.match(letters)) {
+    return true;
+  } else  {
+    alert('User address must have alphanumeric characters only');
+    uadd.focus();
+    return false;
+  }
+}
+
+
+function countryselect(ucountry)  {
+  if(ucountry.value == "Default") {
+    alert('Select your country from the list');
+    ucountry.focus();
+    return false;
+} else {
+    return true;
+  }
+}
+
+
+function allnumeric(uzip) { 
+  var numbers = /^[0-9]+$/;
+  if(uzip.value.match(numbers)) {
+    return true;
+  } else  {
+    alert('ZIP code must have numeric characters only');
+    uzip.focus();
+    return false;
+  }
+}
+
+
+function ValidateEmail(uemail) {
+  var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  if(uemail.value.match(mailformat))  {
+    return true;
+  } else {
+    alert("You have entered an invalid email address!");
+    uemail.focus();
+    return false;
+  }
+}
+
+
+function validsex(umsex,ufsex) {
+  x=0;
+  if(umsex.checked) {
+    x++;
+  } 
+  if(ufsex.checked) {
+    x++; 
+  }
+  if(x==0)  {
+    alert('Select Male/Female');
+    umsex.focus();
+    return false;
+  } else {
+    alert('Form Successfully Submitted');
+    window.location.reload()
+    return true;
+  }
+}
+</script>
+  <body onload="document.registration.userid.focus();">
+    <script>
+    function goto() {
+      window.location.href = "../../anokha/index.html";
+    }
+    </script>
+    <h1>Anokha 2023 Registration Form</h1>
+    <p style="text-align:center">Use tab keys to move to next Section.</p>
+    <form name='registration' onSubmit="return formValidation();">
+      <ul>
+        <li><label for="userid"><b><u>User id:</u></b></label></li>
+        <li><input type="text" name="userid" size="12" /></li>
+        <li><label for="passid"><b><u>Password:</u></b></label></li>
+        <li><input type="password" name="passid" size="12" /></li>
+        <li><label for="passid"><b><u>Confirm Password:</u></b></label></li>
+        <li><input type="password" name="passid" size="12" /></li>
+        <li><label for="username"><b><u>Username</u></b></label></li>
+        <li><input type="text" name="username" size="50" /></li>
+        <li><label for="address"><b><u>College Name:</u></b></label></li>
+        <li><input type="text" name="address" size="50" /></li>
+        <li><label for="country"><b><u>Branch:</u></b></label></li>
+        <li><select name="country">
+          <option selected="" value="Default">(Please select a Branch)</option>
+          <option value="AF">EEE</option>
+          <option value="AL">AIE</option>
+          <option value="DZ">CSE</option>
+          <option value="AS">CYS</option>
+          <option value="AD">ECE</option>
+        </select>
+        </li>
+        <li><label for="zip"><b><u>ZIP Code:</u></b></label></li>
+        <li><input type="text" name="zip" /></li>
+        <li><label for="email"><b><u>Email:</u></b></label></li>
+        <li><input type="text" name="email" size="50" /></li>
+        <li><label id="gender"><b><u>Gender:</u></b></label></li>
+        <li><input type="radio" name="gender" value="Male" /><span>Male</span></li>
+        <li><input type="radio" name="gender" value="Female" /><span>Female</span></li>
+        <li><lable id="study"><b><u>Year of studying:</u></b></label></li>
+        <li><input type="radio" name="year" value="1st" /><spam>1st Year</spam></li>
+        <li><input type="radio" name="year" value="2nd" /><spam>2nd Year</spam></li>
+        <li><input type="radio" name="year" value="3rd" /><spam>3rd Year</spam></li>
+        <li><input type="radio" name="year" value="4th" /><spam>4th Year</spam></li>
+        <li><label><b><u>Need Accomodation:</u></b></label></li>
+        <li><input type="radio" name="accomodation" value="en" /><span>Yes</span></li>
+        <li><input type="radio" name="accomodation" value="noen" /><span>No</span></li>
+        <li><label for="profile-picture"><b><u>Upload a profile picture:</u></b></label></li> 
+        <li><input id="profile-picture" type="file" name="file" /></li>
+        <li><label for="desc"><b><u>About:</b></u></label></li>
+        <li><textarea name="desc" id="desc" placeholder="Tell us more about you"></textarea></li>
+
+        <center><li><button>Submit</button></li></center>
+        <br>
+        <center><a href="anokhahome.html" style="color: aliceblue;" >Home</a></center>
+      </ul>
+    </form>      
+  </body>
+</html>
