@@ -103,7 +103,7 @@ var ufsex = document.registration.fsex;
         if(countryselect(ucountry)) {
           if(allnumeric(uzip)) {
             if(ValidateEmail(uemail)) {
-              if(validsex(umsex,ufsex)) {}
+              if(success()) {}
               } 
             }
           } 
@@ -168,28 +168,12 @@ function ValidateEmail(uemail) {
     alert("You have entered an invalid email address!");
     uemail.focus();
     return false;
-  }
-}
-
-
-function validsex(umsex,ufsex) {
-  x=0;
-  if(umsex.checked) {
-    x++;
   } 
-  if(ufsex.checked) {
-    x++; 
-  }
-  if(x==0)  {
-    alert('Select Male/Female');
-    umsex.focus();
-    return false;
-  } else {
-    alert('Form Successfully Submitted');
-    window.location.reload()
-    return true;
-  }
 }
+function success(){
+    alert('Form Successfully Submitted');
+  }
+
 </script>
   <body onload="document.registration.userid.focus();">
     <script>
